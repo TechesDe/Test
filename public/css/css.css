@@ -3,51 +3,134 @@ body
     text-align: center;
     font-size: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: 8vh 84vh 8vh;
 }
-header span
+
+header
 {
-    font-size: 30px;
+    grid-column: span 12;
+    display: flex;
+    flex-flow: row wrap;
+    background: #37ABFF;
 }
-header span:after
+header > p
 {
-    content: '';
-    border-top: 3px solid black;
-    display: block;
-    width: 100px;
-    margin: 10px auto;
-    
+    margin-left: right;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #FFFFFF;
 }
-div .Banner
+
+header p + div
 {
-    display: inline-block;
-    margin: 25px;
-}
-#Users
-{
-    max-width: 1000px; 
     margin-left: auto;
-    margin-right: auto;
-    
 }
-div .Banner img
+header div{
+    margin: 10px;
+
+}
+.icon
 {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
+    grid-column: 11;
+    width: 50px;
+    height: 50px;
+    background: #59B9FF;
     border-radius: 50%;
+}
+
+body aside
+{
+    grid-column: span 2;
+    background: #EDEDED;
+}
+body aside p
+{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500px;
+    font-size: 18px;
+    line-height: 21px;
+    color: #464646;
+    height: 100px;
+    margin: auto;
+    align-items: center;
+}
+body aside p:hover
+{
+    background: #59B9FF;
+}
+
+main{
+    grid-column: span 10;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    max-width: 1000px;
+}
+
+
+.card
+{
+    display: block;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    background: #F3F3F3;
+    border-radius: 10px;
+    max-width: 230px;
+    text-align: left;
+    margin: 10px;
+}
+.card img
+{
+    border-radius: 10px 10px 0px 0px;
     
 }
-div .Banner img:hover
+.card p
 {
-    background: black;
-    box-shadow: 0px 0px 10px 10px gray;
+    margin-left: 10px;
+    font-size: medium;
 }
-#sheer
-{
+.card p+p{
+    font-size: small;
     color: gray;
 }
 
-#logos
+.button
 {
-    height: 30px;
+    border-radius: 0px 0px 10px 10px;
+    background: lightgrey;
+    text-align: center;
+}
+#seemore
+{
+    width: 200px;
+    height: 50px;
+    background:#59B9FF;
+    align-items: center;/*пытался выровнять текст в центре... не вышло*/
+    color: white;
+    border-radius: 10px;
+}
+
+footer
+{
+    grid-column: span 12;
+    display: flex;
+    background: #3C3C3C;
+}
+footer p
+{
+    margin: auto 10px;
+    color: lightgray;
+}
+footer p+p
+{
+    margin-left: auto;
 }
